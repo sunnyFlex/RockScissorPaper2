@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="100"
+    android:padding="5dp"
+    android:background="@drawable/game_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="85"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:orientation="vertical"
+            android:weightSum="100">
+
+            <FrameLayout
+                android:id="@+id/header_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/title_back_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/title_back" />
+
+                <ImageView
+                    android:id="@+id/title_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/title_front"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/header_hand_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="70"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+                <ImageView
+                    android:id="@+id/player_hand_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/player_rock"
+                    android:padding="10dp"
+                    android:layout_weight="40"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/title_view_background"/>
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="0dp"
+                    android:layout_height="71dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_select"
+                    android:padding="10dp"
+                    android:scaleType="fitCenter"
+                    android:layout_weight="20"
+                    android:src="@drawable/ic_baseline_back_button" />
+
+                <ImageView
+                    android:id="@+id/com_hand_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:src="@drawable/hand_anim"
+                    android:layout_weight="40"
+                    android:background="@drawable/title_view_background"/>
+
+                <ImageView
+                    android:id="@+id/com_hand_result"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp"
+                    android:src="@drawable/hand_anim"
+                    android:layout_weight="40"
+                    android:background="@drawable/title_view_background"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/header_gage_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30">
+
+                <ImageView
+                    android:id="@+id/result_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vs"
+                    android:layout_gravity="center|top"/>
+
+                <TextView
+                    android:id="@+id/player_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="com"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="40dp"
+                    />
+
+                <TextView
+                    android:id="@+id/com_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="player"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginBottom="40dp"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_gravity="bottom"
+                    android:backgroundTint="#ffffff"
+                    android:layout_margin="10dp"
+                    />
+
+                <ProgressBar
+                    android:id="@+id/com_progress"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="10dp"
+                    />
+
+
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/body_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="60"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/main_ready_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ready_anim"/>
+
+            <ImageView
+                android:id="@+id/main_result_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/main_com_attack"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/button_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <ImageButton
+            android:id="@+id/scissor_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:src="@drawable/player_scissor"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:tag="1"
+            android:background="@drawable/button_select"/>
+
+        <ImageButton
+            android:id="@+id/rock_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:src="@drawable/player_rock"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:tag="2"
+            android:background="@drawable/button_select"/>
+
+        <ImageButton
+            android:id="@+id/paper_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:src="@drawable/player_paper"
+            android:scaleType="fitCenter"
+            android:padding="10dp"
+            android:tag="3"
+            android:background="@drawable/button_select"/>
+
+        <ImageButton
+            android:id="@+id/play_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:src="@drawable/game_play"
+            android:scaleType="fitCenter"
+            android:background="@drawable/button_select"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

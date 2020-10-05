@@ -1,0 +1,23 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#050505</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 생성한 splash_background.xml 연결-->
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+    <style name="progressbar_color_under_api21_player">
+        <item name="colorAccent">#FF5656</item>
+    </style>
+
+    <style name="progressbar_color_under_api21_com">
+        <item name="colorAccent">#56FFD8</item>
+    </style>
+
+</resources>
